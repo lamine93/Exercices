@@ -1,0 +1,7 @@
+CPU:
+pgcc -acc -ta=multicore -Minfo=all -O3 -D CPU_TIMERS -mcmodel=medium vector-add.c -o vector-add
+
+
+GPU
+pgcc -acc -ta=nvidia,cc50 -Minfo=accel -O3 -mcmodel=medium vector-add.c -o vector-add
+pgcc -acc -ta=nvidia,cc60 -Minfo=accel -O3 -mcmodel=medium vector-add.c -o vector-add
