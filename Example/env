@@ -1,0 +1,3 @@
+module purge
+module use /sw/arch/RedHatEnterpriseServer7/EB_testing/modulefiles
+module load compiler/GCCcore/10.2.0 

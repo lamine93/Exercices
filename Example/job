@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name=job
+#SBATCH --output=job.o%J
+#SBATCH --time=0:30:00
+#SBATCH --nodes=1
+#SBATCH --reservation=prace_gpu_day_3
+#SBATCH --ntasks-per-node=1
+
+./vecmat_gpun.x<<EOF
+2500
+EOF
+
